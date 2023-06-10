@@ -1,0 +1,7 @@
+
+
+1. Callbacks are a traditional way of handling asynchronous operations, while promises provide a more structured and intuitive approach.
+2. Callbacks can lead to callback hell and make code difficult to read and maintain, while promises offer a more readable and maintainable solution.
+3. Error handling with callbacks can be error-prone, while promises have built-in error handling through the `.catch()` method.
+4. Callbacks require manual control flow management, while promises provide a declarative and composable approach to control flow.
+5. Promises allow for better error propagation, conditional branching, and parallel execution using features like `Promise.all()` and `Promise.race()`.
