@@ -1,0 +1,22 @@
+What were the 10 new features that were introduced in ES6? Explain each one of them in detail? You will be asked questions on each example you give?
+
+
+1 template laterals:-an easy and optimized way to concaninate strings with variables with the use of back tick.
+
+2  let and const variables 
+
+3 arrow functions this are the functions which could be declared using fat arrows and are also able to scope this keyword in it.
+
+4 destructuring with the help of this we could easily pick out the specific function , elements from the arrays and objects
+
+5 rest operator could give n number of arguments to our function as an arguments
+
+6 spread operator with the help of this we could easily clone the desired array with inserting some updates to it.
+
+7 default parameters- a way to assign default values to function parameters if no value or undefined is passed.
+
+ classes- introduced the concept of classes and inheritance in JavaScript, making it easier to create and manage objects.
+
+  Promises- introduced a new way to handle asynchronous operations, making it easier to write and manage asynchronous code by chaining promises and handling success or failure with .then() and .catch() methods.
+
+  modules- introduced a standardized way to organize and share JavaScript code using modules, allowing for better code organization and reusability.
