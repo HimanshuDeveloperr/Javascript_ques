@@ -1,0 +1,4 @@
+null is a value that represents the intentional absence of any object value. It is typically assigned to a variable or property to indicate that it has no value or that the value is explicitly set to nothing.
+
+
+undefined is a value that indicates a variable or property has been declared but has not been assigned a value. It is often the default value assigned by JavaScript when a variable is declared but not initialized.
