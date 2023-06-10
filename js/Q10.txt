@@ -1,0 +1,30 @@
+`array.map` and `array.filter` are both array methods in JavaScript that operate on arrays and return a new array. However, they serve different purposes:
+
+`array.map`:
+- The `map()` method creates a new array by applying a provided function to each element of the original array.
+- It transforms the elements of an array based on the logic defined in the provided function.
+- The resulting array will have the same length as the original array.
+- The returned values from the function are collected and used to form the new array.
+
+Example of `array.map`:
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+const doubledNumbers = numbers.map(num => num * 2);
+console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
+```
+In this example, the `map()` method is used to double each element in the `numbers` array, resulting in a new array `doubledNumbers`.
+
+`array.filter`:
+- The `filter()` method creates a new array containing only the elements from the original array that pass a provided filtering condition.
+- It filters out elements based on the logic defined in the provided function.
+- The resulting array may have a different length than the original array, depending on the number of elements that satisfy the filtering condition.
+
+Example of `array.filter`:
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+console.log(evenNumbers); // Output: [2, 4]
+```
+In this example, the `filter()` method is used to filter out only the even numbers from the `numbers` array, resulting in a new array `evenNumbers` containing `[2, 4]`.
+
+In summary, `array.map` transforms each element of an array based on a provided function and returns a new array with the same length. `array.filter` creates a new array containing only the elements that pass a provided filtering condition, potentially resulting in a different length for the new array.
