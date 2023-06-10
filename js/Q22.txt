@@ -1,0 +1,9 @@
+The reduce method in JavaScript is used to reduce an array to a single value by applying a reducer function to each element of the array. It iterates over the array and accumulates a result based on the logic defined in the reducer function.
+
+const numbers = [1, 2, 3, 4, 5];
+
+const sum = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+}, 0);
+
+console.log(sum); // Output: 15
