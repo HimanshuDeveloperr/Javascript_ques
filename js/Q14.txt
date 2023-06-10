@@ -1,0 +1,7 @@
+When do we use async await ?
+
+We use async/await when working with asynchronous operations in JavaScript and when we want to write asynchronous code in a more synchronous-like manner
+
+
+
+The `await` keyword can only be used inside an `async` function because it allows the function to pause and wait for a promise to complete. By requiring `await` to be used within an `async` function, JavaScript ensures that the flow of asynchronous code is managed correctly and makes it clear that the function involves asynchronous operations that may require waiting for promises to resolve. This helps maintain code structure and predictability when working with asynchronous operations.
