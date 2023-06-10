@@ -1,0 +1,22 @@
+In JavaScript, a generator function is a special type of function that can be paused and resumed during its execution
+
+ It allows you to define an iterative algorithm by writing code that looks like a standard function but behaves differently.
+
+ function* myGenerator() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+const generator = myGenerator();
+console.log(generator.next()); // { value: 1, done: false }
+console.log(generator.next()); // { value: 2, done: false }
+console.log(generator.next()); // { value: 3, done: false }
+console.log(generator.next()); // { value: undefined, done: true }
+
+In the example above, function* is used to declare a generator function called myGenerator(). Inside this function, the yield keyword is used to pause the execution and produce a value. When next() is called on the generator object, it resumes the execution from where it left off and returns an object with the value and done properties.
+
+
+ Generator functions allow you to control the execution flow by using the yield keyword to pause and resume
+
+  Normal functions execute from start to finish without the ability to pause in between.
