@@ -1,0 +1,33 @@
+An IIFE, which stands for Immediately Invoked Function Expression, is a JavaScript function that is executed as soon as it is defined. It is a way to create a self-contained scope for the function and invoke it immediately without needing to assign it to a variable or explicitly call it later.
+
+Here's an example of an IIFE in JavaScript:
+
+```javascript
+(function() {
+  // Code inside the IIFE
+  var message = "Hello, I'm inside an IIFE!";
+  console.log(message);
+})();
+```
+
+In the example above, we define an anonymous function enclosed in parentheses `(function() { ... })`. This creates a function expression. The parentheses wrapping the function expression `(function() { ... })` are important to indicate that it's a function expression rather than a function declaration.
+
+After defining the function expression, we immediately invoke it by adding another pair of parentheses `()`. This invokes the function immediately.
+
+Inside the IIFE, we can have any JavaScript code. In this example, we simply assign a message to a variable `message` and log it to the console.
+
+The output of the IIFE will be:
+
+```
+Hello, I'm inside an IIFE!
+```
+
+The key benefits of using an IIFE include:
+
+1. **Encapsulation**: The variables and functions declared inside the IIFE are not accessible from the outside scope. This helps avoid polluting the global namespace and keeps the code modular and isolated.
+
+2. **Avoiding Naming Collisions**: Since the variables and functions inside the IIFE have their own scope, it reduces the chance of naming collisions with other parts of the codebase.
+
+3. **Immediate Execution**: The IIFE is invoked immediately after it is defined, allowing you to execute code right away without explicitly calling the function later.
+
+IIFEs are commonly used in JavaScript to create private variables, define modules, and prevent conflicts with other code. They provide a way to encapsulate functionality and create self-contained code blocks.
