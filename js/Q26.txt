@@ -1,0 +1,24 @@
+
+Imagine you have a set of nested elements, like boxes inside boxes. Each box has a button on it. When you click the button, the click event doesn't just affect the button itself but also "bubbles up" through its parent boxes, triggering their event handlers too.
+
+So, event bubbling is like dropping a pebble into a pond. The ripples of the event spread outward from the point of impact, affecting the surrounding elements in the DOM hierarchy.
+
+In code, event bubbling means that when an event occurs on an element, such as a button click, the event will trigger not only the event handler attached to that specific element but also the event handlers attached to its parent elements all the way up to the top-most element.
+
+This behavior of event bubbling allows you to handle events at higher levels in the DOM hierarchy without needing to attach event listeners to each individual element. It simplifies event management and makes it easier to organize and control event handling in your JavaScript code.
+
+
+
+Certainly! Let me explain event capturing in simpler terms:
+
+Event capturing is the opposite of event bubbling. Instead of starting the event at the target element and propagating up, event capturing starts at the outermost element and works its way down to the target element.
+
+Imagine you have a set of nested elements, like boxes inside boxes. Each box has a button on it. With event capturing, when you click the button, the event starts at the top-most element and "captures" the event as it travels down through the nested elements towards the target element.
+
+In code, event capturing means that when an event occurs on an element, such as a button click, the event will trigger the event handlers attached to the parent elements before reaching the target element.
+
+However, it's important to note that event capturing is less commonly used in practice compared to event bubbling. Most event handlers are attached to elements using event bubbling, which is the default behavior in most browsers.
+
+To use event capturing explicitly, you can set the `addEventListener` method's third parameter to `true` when attaching the event handler. By default, this parameter is set to `false`, enabling event bubbling.
+
+Overall, event capturing provides an alternative way to handle events where you want to capture and handle the event at the parent elements before it reaches the target element.
