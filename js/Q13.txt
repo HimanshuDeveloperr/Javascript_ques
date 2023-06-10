@@ -1,0 +1,8 @@
+- Promises provide a more structured and readable way to handle asynchronous operations compared to traditional callbacks.
+- Promises separate the code for handling success and failure cases, making it easier to manage and reason about asynchronous code.
+- Promises allow for chaining multiple asynchronous operations together, avoiding callback hell and improving code organization.
+- Promises have built-in error handling through the `.catch()` method, enabling centralized error handling.
+- The introduction of `async/await` simplifies the handling of asynchronous operations by allowing code to be written in a more synchronous-like manner.
+- `async/await` eliminates the need for explicit `.then()` callbacks and provides a linear and sequential flow of execution.
+- `async/await` uses regular try-catch blocks for error handling, making it easier to handle and propagate errors in asynchronous code.
+- Promises and `async/await` improve the overall developer experience when working with asynchronous operations in JavaScript by enhancing readability, manageability, and error handling.
