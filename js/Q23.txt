@@ -1,0 +1,6 @@
+what is the difference between == And ===
+
+
+it will only compare value and data  == loose comparison
+
+it will compare valuea and data type === strict comparison
