@@ -1,0 +1,18 @@
+In JavaScript, objects do not have a built-in `length` property like arrays. However, you can find the number of properties (key-value pairs) in an object by using the `Object.keys()` method and getting the length of the resulting array.
+
+Here's an example of how to find the length of an object:
+
+```javascript
+const obj = {
+  name: 'John',
+  age: 30,
+  city: 'New York'
+};
+
+const length = Object.keys(obj).length;
+console.log(length); // Output: 3
+```
+
+In this example, the `Object.keys(obj)` method returns an array of the object's keys (`['name', 'age', 'city']`), and then we use the `length` property of the resulting array to determine the number of properties in the object.
+
+Note that this approach will only count the enumerable properties of the object. If the object has non-enumerable properties or properties inherited from its prototype chain, they will not be included in the count.
