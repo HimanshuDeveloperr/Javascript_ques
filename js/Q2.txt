@@ -1,0 +1,45 @@
+
+
+
+In Node.js, `process.nextTick()` is a method that allows you to schedule a function to be executed on the next pass of the event loop, immediately after the current operation completes.
+
+Here's a summary of `process.nextTick()`:
+
+- `process.nextTick()` is used to defer the execution of a function to the next iteration of the event loop.
+- It is often used to ensure that a callback function is executed asynchronously but before any other I/O events or timers.
+- Callbacks scheduled with `process.nextTick()` have a higher priority than other asynchronous operations.
+- The callbacks scheduled with `process.nextTick()` are executed in the order they are scheduled.
+- Unlike `setTimeout()` and `setImmediate()`, `process.nextTick()` doesn't introduce any additional delay. The scheduled function is executed as soon as possible.
+- It is commonly used in cases where you want to guarantee that a callback is executed asynchronously, regardless of the current phase of the event loop.
+
+Example usage:
+
+```javascript
+function someAsyncOperation(callback) {
+  // Perform some asynchronous operation
+  // ...
+
+  // Schedule the callback to be executed on the next pass of the event loop
+  process.nextTick(callback);
+}
+
+console.log("Start");
+
+someAsyncOperation(() => {
+  console.log("Async operation completed");
+});
+
+console.log("End");
+```
+
+Output:
+
+```
+Start
+End
+Async operation completed
+```
+
+In this example, the `someAsyncOperation()` function performs an asynchronous operation and schedules the provided callback function using `process.nextTick()`. The callback is executed immediately after the current operation completes but before other I/O events or timers.
+
+The output demonstrates that the callback function is executed asynchronously, after the "Start" and "End" messages are logged.

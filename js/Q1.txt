@@ -6,3 +6,73 @@ What is difference between let and const? What is the difference between let and
 - `let` allows you to declare variables that can be reassigned a new value and are block-scoped.
 - `const` allows you to declare variables that are read-only and cannot be reassigned after being assigned a value. They are also block-scoped.
 - `var` is the older way of declaring variables in JavaScript. It is function-scoped, allows redeclaration within the same scope, and gets hoisted to the top of its scope.
+
+
+`let` and `const` are two different ways to declare variables in JavaScript, introduced in ECMAScript 6 (ES6) to provide block-level scoping.
+
+Here's a breakdown of the differences between `let` and `const`:
+
+1. **Variable reassignment:** With `let`, you can reassign a new value to the variable, while with `const`, the variable is read-only and cannot be reassigned once it has been assigned a value.
+
+   Example with `let`:
+   ```javascript
+   let x = 10;
+   x = 20; // Valid, reassigning the value of x to 20
+   ```
+
+   Example with `const`:
+   ```javascript
+   const y = 10;
+   y = 20; // Invalid, as const variables cannot be reassigned
+   ```
+
+2. **Block scoping:** Both `let` and `const` are block-scoped, meaning they are limited to the block of code in which they are defined. Variables declared with `let` or `const` inside a block `{}` are not accessible outside of that block.
+
+   Example:
+   ```javascript
+   if (true) {
+     let z = 10;
+     const w = 20;
+   }
+
+   console.log(z); // ReferenceError: z is not defined
+   console.log(w); // ReferenceError: w is not defined
+   ```
+
+   In this example, `z` and `w` are block-scoped variables. Trying to access them outside of the block results in a ReferenceError.
+
+Now, let's compare `let` with the older `var` declaration:
+
+1. **Scoping:** `let` is block-scoped, while `var` is function-scoped. Variables declared with `let` are limited to the block in which they are defined, while variables declared with `var` are accessible within the entire function in which they are defined.
+
+2. **Variable hoisting:** Variables declared with `let` are not hoisted to the top of their scope, unlike `var` variables. This means that with `let`, you cannot access the variable before it is declared in the code. `var` variables, on the other hand, are hoisted to the top, allowing you to access them before they are declared.
+
+   Example with `let`:
+   ```javascript
+   console.log(x); // ReferenceError: Cannot access 'x' before initialization
+   let x = 10;
+   ```
+
+   Example with `var`:
+   ```javascript
+   console.log(y); // undefined (no error)
+   var y = 10;
+   ```
+
+   In the `let` example, trying to access `x` before it is declared results in a ReferenceError. However, with `var`, accessing `y` before its declaration outputs `undefined` without throwing an error.
+
+3. **Re-declaration:** With `let`, you cannot redeclare a variable within the same scope. However, with `var`, you can redeclare a variable within the same scope without any error.
+
+   Example with `let`:
+   ```javascript
+   let z = 10;
+   let z = 20; // SyntaxError: Identifier 'z' has already been declared
+   ```
+
+   Example with `var`:
+   ```javascript
+   var w = 10;
+   var w = 20; // No error, the variable w is redeclared
+   ```
+
+To summarize, `let` and `const` provide block scoping and differ in terms of variable reassignment, while `var` provides function scoping, hoisting, and allows re-declaration within the same scope.
