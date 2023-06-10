@@ -1,0 +1,11 @@
+Hoisting:
+- Hoisting is a JavaScript behavior where function and variable declarations are moved to the top of their containing scope during the compilation phase, allowing them to be accessed before they are formally declared in the code.
+- This means that you can call or access functions and variables even before their actual declarations in the code. However, only the declarations are hoisted, not the initializations or assignments.
+
+Callbacks:
+- Callbacks are a way to achieve asynchronous behavior in JavaScript.
+- A callback is a function that is passed as an argument to another function and is executed after a particular event or task is completed.
+- The function that receives the callback function can then invoke the callback at an appropriate time, such as when an asynchronous operation completes or when a certain condition is met.
+- Callbacks allow you to control the flow of execution and handle the result or error from the asynchronous operation once it is completed.
+
+In summary, hoisting enables accessing functions and variables before their declarations, while callbacks are functions passed as arguments to other functions, enabling asynchronous behavior and execution control.
