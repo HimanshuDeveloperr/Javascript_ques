@@ -1,0 +1,23 @@
+ES6 (ECMAScript 2015) introduced several new features and enhancements to the JavaScript language. Here are some notable ES6 features:
+
+1. Arrow Functions: Shorter syntax for defining functions using the `=>` arrow notation. They have lexical scoping of `this` and provide a more concise way of writing function expressions.
+
+2. Block-Scoped Variables: The `let` and `const` keywords allow block-level scoping, providing better control over variable scope and reducing the usage of `var`.
+
+3. Template Literals: Enhanced string literals that support interpolation of variables and expressions using backticks (` `) instead of single or double quotes.
+
+4. Destructuring Assignment: Enables extracting values from arrays or objects into individual variables using a concise syntax.
+
+5. Default Parameters: The ability to specify default values for function parameters, which are used when no argument or `undefined` is passed.
+
+6. Rest Parameters: Allows functions to accept an indefinite number of arguments as an array using the rest parameter syntax (`...`).
+
+7. Spread Operator: Allows expanding elements of an array or object into individual elements, making it easier to clone arrays or concatenate them.
+
+8. Classes: The introduction of class syntax for defining objects and their behavior, following the concept of object-oriented programming.
+
+9. Promises: Provides a more structured approach for handling asynchronous operations, allowing better error handling and chaining of asynchronous tasks.
+
+10. Modules: The `import` and `export` keywords enable modular JavaScript by allowing files to import and export functions, objects, or values.
+
+These are just a few of the key features introduced in ES6. ES6 brought significant improvements to the JavaScript language, making it more expressive, concise, and powerful.
