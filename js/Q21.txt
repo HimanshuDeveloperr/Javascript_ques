@@ -1,0 +1,14 @@
+Array.forEach:
+The forEach method is used to iterate over an array and perform a specified operation for each element. It doesn't return a new array but instead modifies the existing array in place or performs side effects.
+
+Array.map:
+The map method creates a new array by applying a provided function to each element in the original array. It returns a new array with the same length as the original, where each element is the result of the applied function.
+
+Array.filter:
+The filter method creates a new array with all elements that pass a provided test. It returns a new array containing only the elements for which the test function returns true.
+
+const evenNumbers = numbers.filter((number) => {
+  return number % 2 === 0;
+});
+
+console.log(evenNumbers);
