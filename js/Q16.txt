@@ -1,0 +1,6 @@
+- Promises provide a more readable and maintainable code structure compared to callbacks.
+- Promises have built-in error handling through the `.catch()` method, making error management easier and more centralized.
+- Promises help solve the issue of callback hell by allowing asynchronous operations to be written in a more flattened and readable manner.
+- Promises enable chaining of asynchronous operations using `.then()`, resulting in a more structured and organized code flow.
+- Promises allow for better composition of asynchronous operations through methods like `Promise.all()`, `Promise.race()`, and `Promise.then()`.
+- Promises offer a more manageable and structured approach to handling asynchronous code compared to deeply nested callbacks.
