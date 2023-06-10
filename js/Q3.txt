@@ -1,0 +1,5 @@
+
+
+
+
+To check if a variable is an array in JavaScript, you can use the Array.isArray() method
