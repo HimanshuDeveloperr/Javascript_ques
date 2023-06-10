@@ -1,0 +1,7 @@
+The expression console.log(null === undefined) will output false.
+
+This is because null and undefined are different types in JavaScript. null is of type 'object', while undefined is of type 'undefined'. Although they both represent the absence of a value, they are distinct in terms of their type and usage.
+
+The expression console.log(null == undefined) will output true.
+
+In JavaScript, the loose equality operator (==) performs type coercion, which means it can convert the operands to a common type before comparison. When comparing null and undefined using ==, they are considered equal because both represent the absence of a value. JavaScript treats them as "equal" in the context of loose equality.
