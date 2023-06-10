@@ -1,0 +1,7 @@
+Here's a concise summary of the differences between `let`, `var`, and `const`:
+
+- `let`: It declares a block-scoped variable that can be reassigned to a new value. It is limited to the block or scope in which it is defined.
+- `var`: It declares a function-scoped variable that can be accessed throughout the entire function, even outside of the block where it is defined. It can be reassigned and redeclared within the same scope.
+- `const`: It declares a block-scoped variable that cannot be reassigned once it is assigned a value. It is read-only and must be assigned a value at the time of declaration.
+
+In summary, `let` allows reassignment and is block-scoped, `var` is function-scoped and allows redeclaration and reassignment, while `const` is block-scoped and read-only, preventing reassignment after initialization.
