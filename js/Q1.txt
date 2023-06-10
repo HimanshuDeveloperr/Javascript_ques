@@ -1,0 +1,8 @@
+
+
+
+What is difference between let and const? What is the difference between let and var?
+
+- `let` allows you to declare variables that can be reassigned a new value and are block-scoped.
+- `const` allows you to declare variables that are read-only and cannot be reassigned after being assigned a value. They are also block-scoped.
+- `var` is the older way of declaring variables in JavaScript. It is function-scoped, allows redeclaration within the same scope, and gets hoisted to the top of its scope.
