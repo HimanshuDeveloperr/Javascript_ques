@@ -1,0 +1,45 @@
+What are promises? 3 states of promises.
+
+
+
+
+
+Promises are objects in JavaScript that represent the eventual completion (or failure) of an asynchronous operation and allow you to handle the result asynchronously. They provide a more structured and readable way to work with asynchronous code compared to traditional callback functions.
+
+Promises have three states:
+
+1. Pending: The initial state of a promise. It means that the asynchronous operation represented by the promise is still ongoing, and the final result is not available yet.
+
+2. Fulfilled: The state of a promise when the asynchronous operation has completed successfully. It means that the promised result or value is available and can be accessed.
+
+3. Rejected: The state of a promise when the asynchronous operation encounters an error or fails to complete. It means that the promised result or value is not available due to an error or failure.
+
+Promises allow you to attach callbacks to handle the fulfillment or rejection of the asynchronous operation. These callbacks are defined using the `.then()` method for fulfillment and the `.catch()` method for rejection. You can also chain multiple asynchronous operations using `.then()` to create a sequence of promises.
+
+Here's an example that demonstrates the usage of promises and their states:
+
+```javascript
+const promise = new Promise((resolve, reject) => {
+  // Asynchronous operation
+  setTimeout(() => {
+    const randomNumber = Math.random();
+    if (randomNumber < 0.5) {
+      resolve(randomNumber);
+    } else {
+      reject('Error: Random number is too high');
+    }
+  }, 1000);
+});
+
+promise.then(result => {
+  console.log('Fulfilled:', result);
+}).catch(error => {
+  console.log('Rejected:', error);
+});
+```
+
+In this example, the promise represents an asynchronous operation that generates a random number after a 1-second delay. If the generated number is less than 0.5, the promise is fulfilled with the number as the result. Otherwise, it is rejected with an error message.
+
+The `.then()` method is used to handle the fulfillment state of the promise, and the `.catch()` method is used to handle the rejection state. Depending on the outcome of the asynchronous operation, either the fulfillment or rejection callback will be executed.
+
+Promises provide a structured way to handle asynchronous operations and manage their outcomes, allowing for more readable and maintainable asynchronous code.
