@@ -1,0 +1,17 @@
+
+
+Certainly! Here's a summary of the key points for each function:
+
+`setImmediate()`:
+- Executes the callback on the next iteration of the event loop, after I/O events and before timers.
+- Lower priority compared to `process.nextTick()`.
+- Useful for executing callback functions asynchronously and allowing I/O events to complete.
+- Intended for breaking down long-running operations and preventing blocking of the event loop.
+
+`process.nextTick()`:
+- Executes the callback immediately after the current operation completes, before any I/O events or timers.
+- Higher priority compared to `setImmediate()`.
+- Useful for ensuring that a callback is executed before any other I/O events or timers.
+- Intended for guaranteeing the immediate execution of certain callbacks without deferring to I/O events or timers.
+
+It's important to note that both functions serve different purposes and should be used based on the specific requirements of your code. Understanding their differences can help you choose the appropriate one for your use case.
