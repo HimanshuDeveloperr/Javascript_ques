@@ -1,0 +1,53 @@
+
+
+
+
+`call`, `apply`, and `bind` are methods in JavaScript that are used to manipulate the value of the `this` keyword in functions.
+
+1. `call`: The `call` method allows you to invoke a function and explicitly specify the value of `this` and pass arguments individually.
+
+Example:
+```javascript
+const person = {
+  name: 'John',
+  sayHello: function() {
+    console.log(`Hello, ${this.name}!`);
+  }
+};
+
+const anotherPerson = {
+  name: 'Jane'
+};
+
+person.sayHello.call(anotherPerson); // Output: Hello, Jane!
+```
+In the above example, `call` is used to invoke the `sayHello` method of the `person` object with `anotherPerson` as the value of `this`.
+
+2. `apply`: The `apply` method is similar to `call`, but it accepts an array-like object as the second argument to pass arguments to the function.
+
+Example:
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+
+const maxNumber = Math.max.apply(null, numbers);
+console.log(maxNumber); // Output: 5
+```
+In this example, `apply` is used to find the maximum number in the `numbers` array by passing each array element as an argument to the `Math.max` function.
+
+3. `bind`: The `bind` method creates a new function with the specified value of `this`, which can be called later. It is useful when you want to create a function with a predefined context.
+
+Example:
+```javascript
+const person = {
+  name: 'John',
+  sayHello: function() {
+    console.log(`Hello, ${this.name}!`);
+  }
+};
+
+const greet = person.sayHello.bind(person);
+greet(); // Output: Hello, John!
+```
+In this example, `bind` is used to create a new function `greet` that has the value of `this` set to the `person` object. When `greet` is invoked, it will log "Hello, John!".
+
+In summary, you can use `call` and `apply` when you want to invoke a function immediately with a specific value of `this` and potentially pass arguments individually or as an array-like object. On the other hand, `bind` is used to create a new function with a specific value of `this`, which can be called later.
