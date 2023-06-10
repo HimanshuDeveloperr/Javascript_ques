@@ -1,0 +1,41 @@
+
+
+Function currying, also known as partial function application, is a technique in functional programming where a function that takes multiple arguments is transformed into a sequence of functions, each taking a single argument. The curried function returns a new function for each argument until all arguments have been provided, and finally, it returns the result when all arguments have been supplied.
+
+
+
+
+
+
+Certainly! Let's explain function currying with a simpler example:
+
+Imagine you have a function called `add` that takes two numbers and returns their sum:
+
+```javascript
+function add(a, b) {
+  return a + b;
+}
+
+console.log(add(2, 3)); // Output: 5
+```
+
+Now, let's curry the `add` function:
+
+```javascript
+function add(a) {
+  return function(b) {
+    return a + b;
+  };
+}
+
+const addTwo = add(2);
+console.log(addTwo(3)); // Output: 5
+```
+
+In this simplified example, we have a curried version of the `add` function. When we call `add(2)`, it returns a new function that expects the second argument `b`. The returned function then adds the fixed value of `2` (from `add(2)`) to the provided `b` value.
+
+By creating a curried function, we can partially apply arguments and obtain specialized versions of the original function. In this case, we created `addTwo`, which is a function that adds `2` to any given value.
+
+When we call `addTwo(3)`, it invokes the returned function with `b` set to `3`, resulting in the addition `2 + 3`. The output is `5`.
+
+Function currying allows you to create reusable functions by partially applying arguments and creating specialized versions for specific use cases. It provides flexibility and composability, making it easier to work with functions that have multiple arguments.
