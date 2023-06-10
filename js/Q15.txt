@@ -1,0 +1,16 @@
+Callbacks are functions that are passed as arguments to other functions and are executed after a specific task completes. Callback hell refers to the situation where multiple nested callbacks are used, resulting in code that is difficult to read and maintain. Here's a simplified example:
+
+
+
+In this example, each operation relies on the result of the previous operation, leading to deeply nested callbacks. This makes the code harder to understand and modify, and it can become challenging to handle errors and maintain code structure.
+
+To avoid callback hell, modern JavaScript provides alternatives like Promises and async/await. These techniques offer more structured and readable ways to handle asynchronous operations, making the code easier to write and maintain.
+
+
+getData(function (data) {
+  process(data, function (processedData) {
+    save(processedData, function (result) {
+      // More nested callbacks...
+    });
+  });
+});
