@@ -1,0 +1,1 @@
+A function definition is a block of code that specifies the behavior and logic of a particular function. It defines the inputs (parameters) that the function accepts and the actions or computations it performs. It is essentially a reusable piece of code that can be called and executed multiple times.
