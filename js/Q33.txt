@@ -1,0 +1,23 @@
+// Example using fat arrow function
+const obj1 = {
+  name: 'Alice',
+  greet: function () {
+    setTimeout(() => {
+      console.log(`Hello, ${this.name}!`); // Lexical `this` binding
+    }, 1000);
+  }
+};
+
+obj1.greet(); // Output: Hello, Alice!
+
+// Example using normal function
+const obj2 = {
+  name: 'Bob',
+  greet: function () {
+    setTimeout(function () {
+      console.log(`Hello, ${this.name}!`); // Dynamic `this` binding
+    }, 1000);
+  }
+};
+
+obj2.greet(); // Output: Hello, undefined!
