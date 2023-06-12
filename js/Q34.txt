@@ -1,0 +1,8 @@
+Ease of use: Axios provides a simple and intuitive API that makes it easy to send HTTP requests and handle responses. It supports both promises and async/await syntax, allowing for cleaner and more readable code.
+
+
+
+Browser and Node.js support: Axios is designed to work seamlessly in both browser environments and Node.js. This versatility makes it a preferred choice for developers working on projects that span multiple platforms.
+
+
+Error handling: Axios has built-in error handling capabilities, making it easier to catch and handle HTTP errors. It automatically rejects promises on non-2xx responses, allowing for centralized error handling in your application.
