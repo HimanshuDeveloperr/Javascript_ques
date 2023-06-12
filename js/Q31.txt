@@ -1,0 +1,23 @@
+object chaining is a method in js where object is created with many methods inside it and those methods are called simultaneously one after another returning the object itself .
+
+ex
+
+const obj = {
+  value: 0,
+
+  add(num) {
+    this.value += num;
+    return this;
+  },
+
+  sub(num) {
+    this.value -= num;
+    return this;
+  }
+};
+
+var result = obj.add(5).sub(3).value;
+console.log(result); // Output: 2
+
+
+Object chaining, also known as method chaining, is a technique in JavaScript that allows multiple methods to be called on an object in a sequential manner, where each method call returns the object itself. This enables concise and readable code by chaining together a series of operations on the same object without the need for intermediate variables.
