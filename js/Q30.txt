@@ -1,0 +1,7 @@
+object prototype method are built in methods in JS , when we create an object in js they already inherited the prototype
+methods of object 
+
+some of them are
+object.prototype.hasOwnProperty(),
+object.prototype.toString(),
+object.prototype.valueOf()
