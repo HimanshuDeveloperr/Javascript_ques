@@ -1,0 +1,27 @@
+
+const myObject = {
+  name: 'John',
+  age: 25,
+  city: 'New York'
+};
+
+const values = Object.values(myObject);
+
+for (const value of values) {
+  console.log(value);
+}
+
+
+const myObject = {
+  name: 'John',
+  age: 25,
+  city: 'New York'
+};
+
+const keys = Object.keys(myObject);
+
+for (const key of keys) {
+  const value = myObject[key];
+  console.log(value);
+}
+.
