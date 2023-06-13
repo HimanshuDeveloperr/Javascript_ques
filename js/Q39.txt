@@ -1,0 +1,31 @@
+ In simple terms, memoization in JavaScript is a technique that helps improve the performance of functions by remembering (or caching) the results of expensive calculations. It avoids redundant computations by storing the results for specific inputs, so that if the same input is encountered again, the cached result is returned instead of recomputing it.
+
+Imagine you have a function that takes some input and performs a complex calculation each time it's called. Without memoization, the function would perform the same calculation repeatedly, even for the same input. Memoization allows you to store the calculated results in a cache, so that if the same input is passed to the function again, it can retrieve the result from the cache instead of redoing the calculation. This saves time and improves the overall performance of the function.
+
+To implement memoization, you typically create a cache object or data structure to store the computed results. Each time the function is called, it checks if the result for the given input is already in the cache. If it is, the cached result is returned. Otherwise, the function performs the calculation, stores the result in the cache, and returns it.
+
+By using memoization, you can optimize functions that have repetitive or computationally expensive calculations, making them faster and more efficient.
+
+
+function memoizedFunction(input) {
+  // Create a cache object to store the computed results
+  const cache = {};
+
+  // Check if the result for the input is already cached
+  if (cache[input]) {
+    console.log('Fetching from cache...');
+    return cache[input]; // Return the cached result
+  } else {
+    console.log('Computing result...');
+    // Perform some expensive calculation
+    const result = input * 2;
+    // Cache the result for future use
+    cache[input] = result;
+    return result;
+  }
+}
+
+console.log(memoizedFunction(5)); // Compute and cache the result for input 5
+console.log(memoizedFunction(5)); // Fetch the result from cache for input 5
+console.log(memoizedFunction(10)); // Compute and cache the result for input 10
+console.log(memoizedFunction(10)); // Fetch the result from cache for input 10
