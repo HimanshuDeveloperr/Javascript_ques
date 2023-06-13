@@ -1,0 +1,39 @@
+In JavaScript, variables can hold values of various data types. The data types in JavaScript can be categorized into two main groups: primitive types and reference types.
+
+1. Primitive Types:
+   - Number: Represents numeric values, such as `3`, `3.14`, etc.
+   - String: Represents sequences of characters enclosed in single or double quotes, such as `'Hello'`, `"World"`, etc.
+   - Boolean: Represents a logical value of either `true` or `false`.
+   - Undefined: Represents a variable that has been declared but has not been assigned a value.
+   - Null: Represents the intentional absence of any object value.
+   - Symbol (added in ECMAScript 6): Represents a unique identifier.
+
+2. Reference Types (Objects):
+   - Object: Represents a collection of key-value pairs and provides a way to group related data and functionality.
+   - Array: Represents an ordered list of values, accessed by their indices (numeric keys).
+   - Function: Represents a reusable block of code that performs a specific task.
+   - Date: Represents a specific moment in time.
+   - RegExp: Represents a regular expression for pattern matching.
+   - and more...
+
+It's important to note that JavaScript is dynamically typed, which means that variables can hold values of different types throughout their lifetime. The data type of a variable is determined by the value assigned to it at a particular point in time. Variables in JavaScript can also be reassigned to a different value of a different type.
+
+For example:
+
+```javascript
+let num = 42; // Number
+let name = 'John'; // String
+let isTrue = true; // Boolean
+let obj = { key: 'value' }; // Object
+let arr = [1, 2, 3]; // Array
+let func = function() { /* code here */ }; // Function
+
+console.log(typeof num); // Output: "number"
+console.log(typeof name); // Output: "string"
+console.log(typeof isTrue); // Output: "boolean"
+console.log(typeof obj); // Output: "object"
+console.log(typeof arr); // Output: "object"
+console.log(typeof func); // Output: "function"
+```
+
+The `typeof` operator can be used to determine the data type of a variable or expression in JavaScript.
