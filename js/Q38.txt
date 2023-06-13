@@ -1,0 +1,38 @@
+Pass by value and pass by reference are two different ways of passing arguments to functions in programming languages. Let's explain each concept and provide an example of pass by reference in JavaScript.
+
+1. Pass by Value:
+   - In pass by value, a copy of the value of the variable is passed to the function.
+   - Any modifications made to the parameter inside the function do not affect the original variable outside the function.
+   - Primitive data types, such as numbers and strings, are passed by value.
+
+
+function modifyValue(value) {
+  value = 42; // Modify the value inside the function
+  console.log('Inside the function:', value); // Output: 42
+}
+
+let myValue = 10;
+console.log('Before the function:', myValue); // Output: 10
+modifyValue(myValue);
+console.log('After the function:', myValue); // Output: 10 (unchanged)
+
+In this example, the `modifyValue` function takes a parameter `value`. Although we modify `value` inside the function, it does not affect the original variable `myValue` outside the function. This is because `value` is a copy of the value of `myValue`, and any modifications are isolated within the function.
+
+2. Pass by Reference:
+   - In pass by reference, the reference (memory address) of the variable is passed to the function.
+   - Any modifications made to the parameter inside the function will affect the original variable outside the function.
+   - Objects (including arrays) and functions are typically passed by reference in JavaScript.
+
+
+function modifyArray(arr) {
+  arr.push('Element 4'); // Modify the array inside the function
+  console.log('Inside the function:', arr); // Output: [1, 2, 3, 'Element 4']
+}
+
+let myArray = [1, 2, 3];
+console.log('Before the function:', myArray); // Output: [1, 2, 3]
+modifyArray(myArray);
+console.log('After the function:', myArray); // Output: [1, 2, 3, 'Element 4']
+
+
+
