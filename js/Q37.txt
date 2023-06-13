@@ -1,0 +1,9 @@
+
+- `NaN` stands for "Not-a-Number" and represents an unrepresentable or undefined numerical result.
+- It is a special value and a property of the global object in JavaScript.
+- `NaN` is typically the result when a mathematical operation fails to produce a meaningful numeric value or encounters an undefined value.
+- Any arithmetic operation involving `NaN` as an operand will produce `NaN` as the result.
+- `NaN` has unique behavior; it is not equal to any other value, including itself. Comparing with `NaN` using the equality operators (`==` or `===`) will return `false`.
+- To check if a value is `NaN`, you should use the `isNaN()` function or the `Number.isNaN()` method, which both return `true` if the value is `NaN`.
+- `NaN` tends to propagate through subsequent operations once it is generated in a computation.
+- Handling cases where `NaN` might be produced in your code is important to avoid unexpected behavior or errors.
