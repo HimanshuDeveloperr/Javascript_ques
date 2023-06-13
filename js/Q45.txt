@@ -1,0 +1,8 @@
+
+var button = document.getElementById("myButton");
+
+button.addEventListener("click", function(event) {
+  event.preventDefault(); // Prevents the default click behavior (e.g., form submission or anchor navigation)
+  event.stopPropagation(); // Stops the event from propagating to parent elements
+  console.log("Button clicked!");
+});
