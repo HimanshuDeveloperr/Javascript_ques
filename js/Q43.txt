@@ -1,0 +1,25 @@
+In JavaScript, the `typeof` operator returns the data type of a value. However, when you use `typeof` with an array, it will return `"object"` rather than specifically indicating that it is an array.
+
+For example:
+```javascript
+var arr = [1, 2, 3];
+console.log(typeof arr); // Output: "object"
+```
+
+The reason for this behavior is that arrays are considered a special type of object in JavaScript. Arrays are objects with additional properties and methods that provide functionality for working with ordered lists of values. While they have array-specific behaviors and can be accessed using numeric indices, they are still objects at their core.
+
+To specifically check if a value is an array, you can use the `Array.isArray()` method introduced in ECMAScript 5 (ES5) or perform a more general type check using `Object.prototype.toString.call()`.
+
+Example using `Array.isArray()`:
+```javascript
+var arr = [1, 2, 3];
+console.log(Array.isArray(arr)); // Output: true
+```
+
+Example using `Object.prototype.toString.call()`:
+```javascript
+var arr = [1, 2, 3];
+console.log(Object.prototype.toString.call(arr)); // Output: "[object Array]"
+```
+
+Both of these methods allow you to determine if a value is an array with more accuracy.
