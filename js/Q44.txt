@@ -1,0 +1,7 @@
+In JavaScript, anonymous functions are functions that are declared without a specified name. Instead of having a name, they are typically assigned to a variable or passed as a callback to another function.
+
+var greeting = function() {
+  console.log("Hello, world!");
+};
+
+greeting(); // Output: Hello, world!
